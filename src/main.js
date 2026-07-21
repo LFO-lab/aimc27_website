@@ -1,26 +1,184 @@
 const pages = [
   { title: "Home", path: "/" },
-  { title: "Calls", path: "/calls" },
-  { title: "Info", path: "/info" },
+  { title: "Call for submissions", path: "/calls" },
+  { title: "Reviewing process", path: "/reviewing-process" },
+  { title: "Program", path: "/program" },
+  { title: "Tutorials and workshops", path: "/tutorials-and-workshops" },
+  { title: "Keynotes", path: "/keynotes" },
+  { title: "Submission info", path: "/submission-info" },
+  { title: "Registration", path: "/registration" },
+  { title: "Venue and travel", path: "/venue-and-travel" },
   { title: "About", path: "/about" },
   { title: "Contact", path: "/contact" },
+];
+
+const navigationItems = [
+  pages[0],
+  {
+    title: "Calls",
+    children: [pages[1], pages[2]],
+  },
+  {
+    title: "Program",
+    children: [pages[3], pages[4], pages[5]],
+  },
+  {
+    title: "Attendees",
+    children: [pages[6], pages[7], pages[8]],
+  },
+  ...pages.slice(9),
 ];
 
 const app = document.querySelector("#app");
 const basePath = import.meta.env.BASE_URL;
 const standardPageContent = {
   "/calls": {
-    title: "Calls",
+    title: "Call for submissions",
     subtitle: "AIMC 2027",
     body: `
       <p>future content</p>
     `,
   },
-  "/info": {
-    title: "Info",
+  "/reviewing-process": {
+    title: "Reviewing process",
     subtitle: "AIMC 2027",
     body: `
       <p>future content</p>
+    `,
+  },
+  "/program": {
+    title: "Program",
+    subtitle: "AIMC 2027",
+    body: `
+      <p>future content</p>
+    `,
+  },
+  "/tutorials-and-workshops": {
+    title: "Tutorials and workshops",
+    subtitle: "AIMC 2027",
+    body: `
+      <p>future content</p>
+    `,
+  },
+  "/keynotes": {
+    title: "Keynotes",
+    subtitle: "",
+    body: `
+      <p>Keynote details will be announced soon.</p>
+    `,
+  },
+  "/submission-info": {
+    title: "Submission info",
+    subtitle: "AIMC 2027",
+    body: `
+      <p>future content</p>
+    `,
+  },
+  "/registration": {
+    title: "Registration",
+    subtitle: "",
+    body: `
+      <p>
+        Registration fees include access to all conference sessions, artistic programming, and
+        daily coffee breaks, lunches and banquet dinner. 
+      </p>
+      <table class="registration-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Early-bird registration</th>
+            <th>Regular registration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Regular (academic/professional)</td>
+            <td>$ 450</td>
+            <td>$ 600</td>
+          </tr>
+          <tr>
+            <td>Student</td>
+            <td>$ 175</td>
+            <td>$ 250</td>
+          </tr>
+          <tr>
+            <td>Independant artist</td>
+            <td>$ 175</td>
+            <td>$ 250</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <p>
+        <i> * All fees are in Canadian Dollars ($CAD). </i>
+      </p>
+    `,
+  },
+  "/venue-and-travel": {
+    title: "Venue and travel",
+    subtitle: "AIMC 2027 will take place in Montreal, Quebec",
+    body: `
+    <h2 class="body-copy-heading">General information</h2> 
+    <p>
+        Montréal is located in Québec, a province of Canada where French
+        is the dominant language of public life. Although most residents are
+        bilingual and can communicate in English when needed, public
+        signage and official displays are primarily in French. This cultural
+        specificity contributes to Montréal's unique identity as a vibrant and
+        multicultural city in which artistic and cultural activities are deeply
+        embedded in everyday life.
+      </p>
+    <h2 class="body-copy-heading">Venues</h2> 
+    <p>
+        Montréal
+    </p>
+    <h2 class="body-copy-heading">Travel</h2>
+    <div class="travel-routes">
+      <article class="travel-route">
+        <div class="route-map">
+          <iframe
+            title="Walking route from Édouard-Montpetit metro station to the Université de Montréal Faculty of Music"
+            src="https://www.google.com/maps?output=embed&amp;saddr=%C3%89douard-Montpetit%2C+Montr%C3%A9al%2C+QC+H3T+1J3&amp;daddr=University+of+Montreal+-+Faculty+of+Music%2C+200+Vincent+D%27Indy+Ave%2C+Outremont%2C+QC+H2V+2T2&amp;dirflg=w"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="travel-route-copy">
+          <h3>Université de Montréal - Faculty of Music</h3>
+          <p>From Édouard-Montpetit metro station, the Faculty of Music at Université de Montréal is a short walk away.</p>
+          <p class="route-map-link">
+            <a href="https://maps.app.goo.gl/aysBeSUWobtRJ2d19" target="_blank" rel="noopener noreferrer">
+              Open the walking route in Google Maps
+            </a>
+          </p>
+        </div>
+      </article>
+      <article class="travel-route">
+        <div class="route-map">
+          <iframe
+            title="Walking route from McGill metro station to CIRMMT"
+            src="https://www.google.com/maps?output=embed&amp;saddr=McGill%2C+Montr%C3%A9al%2C+QC+H3A+1T9&amp;daddr=CIRMMT%2C+527+Rue+Sherbrooke+O+%238%2C+Montr%C3%A9al%2C+QC+H3A+1E3&amp;dirflg=w"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="travel-route-copy">
+          <h3>CIRMMT</h3>
+          <p>From McGill metro station, CIRMMT is a short walk away.</p>
+          <p class="route-map-link">
+            <a href="https://maps.app.goo.gl/m33eRmUB6WX68Rfq8" target="_blank" rel="noopener noreferrer">
+              Open the walking route in Google Maps
+            </a>
+          </p>
+        </div>
+      </article>
+    </div>
+    <h2 class="body-copy-heading">Accomodation</h2> 
+    <p>
+        Montréal
+    </p>
     `,
   },
   "/about": {
@@ -47,22 +205,57 @@ const standardPageContent = {
         For more information, visit
         <a href="https://aimusiccreativity.org">https://aimusiccreativity.org</a>
       </p>
-      <h2 class="body-copy-heading">People</h2>
+      <br>
+      <hr>
+      <br>
+      <h2 class="body-copy-heading">Organizing Committee</h2>
                 <p>
-                  <b>Conference Chair:</b> Dominic Thibault | Email: dominic.thibault@umontreal.ca
-                </p>      
+                  <b>Conference Chair: Dominic Thibault </b>| Université de Montréal, Montréal, Canada
+                <br>
+                  <b>Scientific Co-Chair: Gabriel Vigliensoni </b>| Concordia University, Montréal, Canada
+                <br>                
+                  <b>Artistic Chair: Eliot Britton </b>| McGill University, Montréal, Canada
+                <br>
+                  <b>Workshop Chair: Erin Gee </b>| Université de Montréal, Montréal, Canada
+                <br>
+                  <b>Local organization: Andrea Gozzi </b>| Université de Sherbrooke, Sherbrooke, Canada
+                <br>
+                  <b>Local organization: Caroline Traube </b>| Université de Montréal, Montréal, Canada
+                <br>
+                  <b>Coordination assistant: Samuel Gendron </b>| Université de Montréal, Montréal, Canada
+                </p>
+                
+      <h2 class="body-copy-heading">Steering Committee</h2>
+                <p>
+                  <b>Philippe Pasquier</b> | Simon Fraser University, School of Interactive Arts and Technology, Canada
+                  <br><b>Robin Laney</b> | The Open University, UK
+                  <br><b>Roisin Loughran</b> | Dundalk Institute of Technology, Ireland
+                  <br><b>Steven Jan</b> | University of Huddersfield, UK
+                  <br><b>Valerio Velardo</b> | MusiMAP
+                  <br><b>Bob L. T. Sturm</b> | Royal Institute of Technology (KTH), Sweden
+                  <br><b>Artemi-Maria Gioti</b> | University of Music Carl Maria von Weber Dresden, Germany
+                  <br><b>Thor Magnusson</b> | Future Music in the Music Department at the University of Sussex, UK and at the University of Iceland
+                  <br><b>Chris Kiefer</b> | Music Technology Department School of Media, Arts and Humanities at the University of Sussex, UK
+                  <br><b>Oded Ben-Tal</b> | Department of Performing Arts, Kingston University London, UK
+                  <br><b>David De Roure</b> | Department of Enginnering Science, University of Oxford, UK
+                  <br><b>Oliver Bown</b> | School of Art and Design, University of New South Wales (UNSW), Australia
+                  <br><b>Geraint A. Wiggins</b> | Artificial Intelligence Lab, Vrije Universiteit Brussel (VUB), Belgium
+                  <br><b>Filippo Carnovalini</b> | Artificial Intelligence Lab, Vrije Universiteit Brussel (VUB), Belgium 
+                </p>
+                <br>
     `,
   },
   "/contact": {
     title: "Contact Us",
-    subtitle: "AIMC 2027",
+    subtitle: "",
     body: `
       <p>
         If you have any questions or need further information about this edition of 
         the AI Music Creativity Conference, please feel free to reach out to us using the contact information below:
-      </p>
+      </p> 
       <p>
         <b>Conference Chair:</b> Dominic Thibault | Email: dominic.thibault@umontreal.ca
+        <br> <b><i>maybe we create a gmail email address specifically for aimc2027? </i> </b>
       </p>
       <p>
         For inquiries regarding the AI Music Creativity Association, please visit the main AIMC 
@@ -122,14 +315,33 @@ function renderPage() {
         >
       </a>
       <nav class="site-nav" aria-label="Main navigation">
-        ${pages
+        ${navigationItems
           .map(
-            (page) => `
+            (item) => item.children
+              ? `
+                <div class="nav-dropdown${item.children.some((page) => page.path === currentPage.path) ? " nav-dropdown--active" : ""}">
+                  <button class="nav-dropdown-trigger" type="button" aria-haspopup="true">
+                    ${item.title}
+                    <span class="nav-dropdown-arrow" aria-hidden="true"></span>
+                  </button>
+                  <div class="nav-dropdown-menu">
+                    ${item.children.map((page) => `
+                      <a
+                        href="${getPageHref(page.path)}"
+                        ${page.path === currentPage.path ? 'aria-current="page"' : ""}
+                      >
+                        ${page.title}
+                      </a>
+                    `).join("")}
+                  </div>
+                </div>
+              `
+              : `
               <a
-                href="${getPageHref(page.path)}"
-                ${page.path === currentPage.path ? 'aria-current="page"' : ""}
+                href="${getPageHref(item.path)}"
+                ${item.path === currentPage.path ? 'aria-current="page"' : ""}
               >
-                ${page.title}
+                ${item.title}
               </a>
             `,
           )
@@ -178,14 +390,22 @@ function renderPage() {
               </article>
               <article class="home-body-column">
                 <h2 class="body-copy-heading">Important Dates</h2>
-                <p>body 2</p>
+                <p>
+                  <b>November 9, 2026 : </b> Call opens <br>
+                  <b>March 1, 2027 : </b> Paper abstract deadline <br>
+                  <b>March 8, 2027 : </b> Full submission deadline<br>
+                  <b>May 3, 2027 : </b> Notifications of acceptance<br>
+                  <b>June 7, 2027 : </b> Camera-ready deadline <br>
+                  <b>July 2, 2027 : </b> Early-bird registration <br>
+                  <b>August 8, 2027 : </b> Regular registration <br>
+                  <b>August 18-20, 2027 : </b> Conference<br>
+                </p>
               </article>
             </section>
           `
           : pageContent
             ? `
               <section class="page-content" aria-labelledby="page-title">
-                <p class="eyebrow">AIMC 2027</p>
                 <h1 id="page-title">${pageContent.title}</h1>
                 <p class="lead">${pageContent.subtitle}</p>
                 <div class="body-copy">
@@ -194,7 +414,6 @@ function renderPage() {
               </section>
             `
           : `
-            <p class="eyebrow">AIMC 2027</p>
             <h1>${currentPage.title}</h1>
             <p class="lead">future content</p>
           `
