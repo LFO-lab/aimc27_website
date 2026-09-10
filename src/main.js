@@ -298,12 +298,20 @@ const standardPageContent = {
         the AI Music Creativity Conference, please feel free to reach out to us using the contact information below:
       </p> 
       <p>
-        <b>Conference Chair:</b> Dominic Thibault | Email: dominic.thibault@umontreal.ca
-        <br> <b><i>maybe we create a gmail email address specifically for aimc2027? </i> </b>
+        <b> chair@aimusiccreativity.org </b> 
+      </p>
+      <p>
+        <b> paper@aimusiccreativity.org </b> 
+      </p>
+      <p>
+        <b> music@aimusiccreativity.org </b> 
+      </p>
+      <p>
+        <b> workshop@aimusiccreativity.org </b> 
       </p>
       <p>
         For inquiries regarding the AI Music Creativity Association, please visit the main AIMC 
-        website at </br><a href="https://aimusiccreativity.org">https://aimusiccreativity.org</a>.
+        website at <a href="https://aimusiccreativity.org">https://aimusiccreativity.org</a>.
       </p>
     `,
   },
