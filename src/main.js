@@ -23,7 +23,7 @@ const navigationItems = [
     children: [pages[3], pages[4], pages[5]],
   },
   {
-    title: "Attendees",
+    title: "For Attendees",
     children: [pages[6], pages[7], pages[8]],
   },
   ...pages.slice(9),
@@ -36,28 +36,28 @@ const standardPageContent = {
     title: "Call for submissions",
     subtitle: "AIMC 2027",
     body: `
-      <p>future content</p>
+      <p>Coming soon.</p>
     `,
   },
   "/reviewing-process": {
     title: "Reviewing process",
     subtitle: "AIMC 2027",
     body: `
-      <p>future content</p>
+      <p>Coming soon.</p>
     `,
   },
   "/program": {
     title: "Program",
     subtitle: "AIMC 2027",
     body: `
-      <p>future content</p>
+      <p>Coming soon.</p>
     `,
   },
   "/tutorials-and-workshops": {
     title: "Tutorials and workshops",
     subtitle: "AIMC 2027",
     body: `
-      <p>future content</p>
+      <p>Coming soon.</p>
     `,
   },
   "/keynotes": {
@@ -128,11 +128,54 @@ const standardPageContent = {
         multicultural city in which artistic and cultural activities are deeply
         embedded in everyday life.
       </p>
-    <h2 class="body-copy-heading">Venues</h2> 
+    <h2 class="body-copy-heading">Travel information</h2>
+    <b>Getting around Montréal</b> 
     <p>
-        Montréal
+        Montréal offers a safe, efficient and accessible public transit network, making it convenient to travel between conference venues, accomodations, 
+        and the city's many attractions. Both conference venues are located in pedestrian-friendly neighbourhoods, within walking distance to hotels, 
+        restaurants and cultural attractions. Additionally, taxi and ride-sharing services are widely available in the city. 
     </p>
-    <h2 class="body-copy-heading">Travel</h2>
+    <b>Montréal-Trudeau International Airport</b> 
+    <p>
+        Montréal-Trudeau International Airport (YUL) is located 20km from downtown Montréal. Travelling to and from the airport is possible by public transportation or taxi.
+        The <a href="https://www.stm.info/en/info/fares/transit-fares/yul-aeroport-centre-ville-747">747 YUL Aéroport / Centre-Ville express bus</a>, which 
+        operates 24-7 with departures every 10-15 minutes, takes approximately 45 to 70 minutes and serves several stops in downtown Montréal before arriving at the Berri-UQAM 
+        metro station. Several fares allow you to board the 747, including the YUL Aéroport fare, a 24-hour pass,
+        or any pass of longer duration (such as the <a href="https://www.stm.info/en/info/fares/transit-fares/3-day-all-modes">Zone A 3-day All Modes pass</a>).  
+    </p>
+    <p>
+        For a faster journey downtown, taxis are available outside of the arrivals terminal at all times. Trips between the airport and downtown Montréal are charged a fixed rate
+        of $49.45 (taxes included) and typically take 20 to 30 minutes. Ride-sharing services are also available at the airport, with fares varying according to demand and travel time.
+    </p>
+    <b>Public transportation</b> 
+    <p>
+        Montréal's public transportation system is one of the most efficient ways to travel throughout the city. Operated primarily by the 
+        <a href="https://www.stm.info/en">Société de transport de Montréal</a> (STM), the network includes four metro lines and an extensive bus system. 
+        The city's <a href="https://rem.info/en">Réseau Express Métropolitain</a> (REM), an automated light-rail system, is integrated with the STM fare 
+        system and provides a quick one-stop connection between McGill University (McGill station, downtown Montréal) and Université de Montréal (Édouard-Montpetit station).
+        Most visitors attending AIMC 2027 will only need to travel within Zone A, which covers the Island of Montréal. 
+    </p>
+    <p> 
+        Transit fares can be purchased at fare vending machines located in all metro and REM stations, as well as in certain convenience stores and pharmacies. 
+        For conference attendees, the <a href="https://www.stm.info/en/info/fares/transit-fares/3-day-all-modes">Zone A 3-day All Modes pass</a> offers good value.
+        At $21.75, it provides unlimited travel for three consecutive days
+        on STM buses, the metro, the REM (within Zone A). 
+    </p>
+    <b>BIXI Bike Sharing</b> 
+    <p>
+        <a href="https://bixi.com/en/one-way-passes/"><i>BIXI</i></a> is Montréal's public bike-sharing system, offering thousands of bicycles 
+        (standard and electric) at numerous stations across the city. It provides a flexible way to travel during the summer months, with stations located 
+        near both conference venues and throughout downtown.  
+    </p>
+    <figure class="transit-map">
+      <img
+        src="${getAssetPath("images/stm_map-interactive.png")}"
+        alt="Map of Montréal's metro and rapid transit network"
+        loading="lazy"
+      >
+      <figcaption>Map of Montréal's transit network</figcaption>
+    </figure>
+    <h2 class="body-copy-heading">Venues</h2>
     <div class="travel-routes">
       <article class="travel-route">
         <div class="route-map">
@@ -146,7 +189,10 @@ const standardPageContent = {
         </div>
         <div class="travel-route-copy">
           <h3>Université de Montréal - Faculty of Music</h3>
+          <p>200 Av. Vincent-D'Indy, Outremont, QC H2V 2T2, Canada</p>
           <p>From Édouard-Montpetit metro station, the Faculty of Music at Université de Montréal is a short walk away.</p>
+          <p>Please note that the Faculty of Music is located on a hill and requires a 200-metre uphill walk. If you require accessibility accomodations to reach the venue,
+              please contact the organizing team in advance. </p>
           <p class="route-map-link">
             <a href="https://maps.app.goo.gl/aysBeSUWobtRJ2d19" target="_blank" rel="noopener noreferrer">
               Open the walking route in Google Maps
@@ -165,7 +211,8 @@ const standardPageContent = {
           ></iframe>
         </div>
         <div class="travel-route-copy">
-          <h3>CIRMMT</h3>
+          <h3>CIRMMT - McGill University</h3>
+          <p>527 Rue Sherbrooke O #8, Montréal, QC H3A 1E3, Canada</p>
           <p>From McGill metro station, CIRMMT is a short walk away.</p>
           <p class="route-map-link">
             <a href="https://maps.app.goo.gl/m33eRmUB6WX68Rfq8" target="_blank" rel="noopener noreferrer">
@@ -205,9 +252,6 @@ const standardPageContent = {
         For more information, visit
         <a href="https://aimusiccreativity.org">https://aimusiccreativity.org</a>
       </p>
-      <br>
-      <hr>
-      <br>
       <h2 class="body-copy-heading">Organizing Committee</h2>
                 <p>
                   <b>Conference Chair: Dominic Thibault </b>| Université de Montréal, Montréal, Canada
@@ -259,7 +303,7 @@ const standardPageContent = {
       </p>
       <p>
         For inquiries regarding the AI Music Creativity Association, please visit the main AIMC 
-        website at <a href="https://aimusiccreativity.org">https://aimusiccreativity.org</a>.
+        website at </br><a href="https://aimusiccreativity.org">https://aimusiccreativity.org</a>.
       </p>
     `,
   },
@@ -306,6 +350,7 @@ function renderPage() {
 
   document.title = `${currentPage.title} | AIMC27`;
   app.innerHTML = `
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <a class="site-title" href="${getPageHref("/")}" aria-label="AIMC27 homepage">
         <img
@@ -348,7 +393,7 @@ function renderPage() {
           .join("")}
       </nav>
     </header>
-    <main class="page${isHomePage ? " page--home" : ""}${pageContent ? " page--standard" : ""}">
+    <main id="main-content" class="page${isHomePage ? " page--home" : ""}${pageContent ? " page--standard" : ""}">
       ${
         isHomePage
           ? `
@@ -361,12 +406,22 @@ function renderPage() {
               <div class="home-subheader-content">
                 <p class="eyebrow">The 8th Conference on AI Music Creativity</p>
                 <h1 id="home-title">AIMC 2027</h1>
-                <p class="lead">August 18 - 20 2027<br> Montreal, Quebec, Canada</p>
+                <p class="hero-theme">At the Limits of Immersion</p>
+                <div class="hero-details" aria-label="Conference details">
+                  <span>August 18–20, 2027</span>
+                  <span>Montréal, Québec, Canada</span>
+                </div>
+                <div class="hero-actions">
+                  <a class="button button--primary" href="${getPageHref("/calls")}">Submit your work</a>
+                  <a class="button button--secondary" href="${getPageHref("/venue-and-travel")}">Plan your visit</a>
+                </div>
               </div>
             </section>
             <section class="home-body">
-              <article class="home-body-column">
-                <h2 class="body-copy-heading">AIMC 2027 : At the Limits of Immersion</h2>
+              <article class="theme-panel">
+                <p class="section-kicker">2027 conference theme</p>
+                <h2>At the Limits<br>of Immersion</h2>
+                <div class="theme-copy">
                 <p>
                   As AI-driven systems increasingly shape musical creation, questions emerge not
                   only about the possibilities, but also about the limits of immersion. Our proposed
@@ -387,27 +442,51 @@ function renderPage() {
                   generative sites where scientific inquiry, engineering practice, artistic creation, and
                   critical reflection must meet.<br>
                 </p>
+                </div>
               </article>
-              <article class="home-body-column">
-                <h2 class="body-copy-heading">Important Dates</h2>
-                <p>
-                  <b>November 9, 2026 : </b> Call opens <br>
-                  <b>March 1, 2027 : </b> Paper abstract deadline <br>
-                  <b>March 8, 2027 : </b> Full submission deadline<br>
-                  <b>May 3, 2027 : </b> Notifications of acceptance<br>
-                  <b>June 7, 2027 : </b> Camera-ready deadline <br>
-                  <b>July 2, 2027 : </b> Early-bird registration <br>
-                  <b>August 8, 2027 : </b> Regular registration <br>
-                  <b>August 18-20, 2027 : </b> Conference<br>
-                </p>
+              <article class="dates-panel">
+                <p class="section-kicker">Mark your calendar</p>
+                <h2>Important dates</h2>
+                <ol class="date-list">
+                  <li><time datetime="2026-11-09"><span>Nov</span> 09</time><p>Call opens<small>2026</small></p></li>
+                  <li><time datetime="2027-03-01"><span>Mar</span> 01</time><p>Paper abstract deadline<small>2027</small></p></li>
+                  <li><time datetime="2027-03-08"><span>Mar</span> 08</time><p>Full submission deadline<small>2027</small></p></li>
+                  <li><time datetime="2027-05-03"><span>May</span> 03</time><p>Notifications of acceptance<small>2027</small></p></li>
+                  <li><time datetime="2027-06-07"><span>Jun</span> 07</time><p>Camera-ready deadline<small>2027</small></p></li>
+                  <li><time datetime="2027-07-02"><span>Jul</span> 02</time><p>Early-bird registration<small>2027</small></p></li>
+                  <li><time datetime="2027-08-08"><span>Aug</span> 08</time><p>Regular registration<small>2027</small></p></li>
+                  <li class="date-list-highlight"><time datetime="2027-08-18"><span>Aug</span> 18–20</time><p>AIMC 2027 conference<small>Montréal</small></p></li>
+                </ol>
               </article>
+            </section>
+            <section class="pathways" aria-labelledby="pathways-title">
+              <div class="pathways-heading">
+
+                <h2 id="pathways-title">Find your way in:</h2>
+              </div>
+              <div class="pathway-grid">
+                <a class="pathway-card pathway-card--yellow" href="${getPageHref("/calls")}">
+                  <span class="pathway-number">01</span><h3>Submit</h3><p>Share research, artistic work, and new approaches to AI music creativity.</p><span class="pathway-link">View calls <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="pathway-card pathway-card--blue" href="${getPageHref("/program")}">
+                  <span class="pathway-number">02</span><h3>Attend</h3><p>Discover the program, workshops, keynotes, and registration information.</p><span class="pathway-link">Explore the program <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="pathway-card pathway-card--navy" href="${getPageHref("/venue-and-travel")}">
+                  <span class="pathway-number">03</span><h3>Montréal</h3><p>Plan your trip and explore two venues at the heart of a vibrant artistic city.</p><span class="pathway-link">Plan your visit <span aria-hidden="true">→</span></span>
+                </a>
+              </div>
             </section>
           `
           : pageContent
             ? `
+              <header class="page-banner">
+                <div class="page-banner-inner">
+                  <p class="eyebrow">AIMC 2027 · Montréal</p>
+                  <h1 id="page-title">${pageContent.title}</h1>
+                  ${pageContent.subtitle ? `<p class="lead">${pageContent.subtitle}</p>` : ""}
+                </div>
+              </header>
               <section class="page-content" aria-labelledby="page-title">
-                <h1 id="page-title">${pageContent.title}</h1>
-                <p class="lead">${pageContent.subtitle}</p>
                 <div class="body-copy">
                   ${pageContent.body}
                 </div>
@@ -420,12 +499,16 @@ function renderPage() {
       }
     </main>
     <footer class="site-footer">
+      <div class="footer-heading">
+        <p class="section-kicker">August 18–20, 2027 · Montréal</p>
+        <p class="footer-title">AI Music Creativity</p>
+      </div>
       <div class="footer-logos" aria-label="Partner institutions">
         <img src="${getAssetPath("images/udem-logo.png")}" alt="Universite de Montreal">
         <img src="${getAssetPath("images/mcgill-logo.png")}" alt="McGill University">
         <img src="${getAssetPath("images/CIRMMT-logo.svg")}" alt="CIRMMT">
       </div>
-      <p>© 2026 AI Music Creativity (AIMC). All rights reserved.</p>
+      <p class="footer-copyright">© 2026 AI Music Creativity (AIMC). All rights reserved.</p>
     </footer>
   `;
 }
