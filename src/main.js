@@ -7,7 +7,9 @@ const pages = [
   { title: "Keynotes", path: "/keynotes" },
   { title: "Submission info", path: "/submission-info" },
   { title: "Registration", path: "/registration" },
-  { title: "Venue and travel", path: "/venue-and-travel" },
+  { title: "Venues and travel", path: "/venues-and-travel" },
+  { title: "Accommodation", path: "/accommodation" },
+  { title: "Accessibility", path: "/accessibility" },
   { title: "About", path: "/about" },
   { title: "Contact", path: "/contact" },
 ];
@@ -24,9 +26,9 @@ const navigationItems = [
   },
   {
     title: "For Attendees",
-    children: [pages[6], pages[7], pages[8]],
+    children: [pages[6], pages[7], pages[8], pages[9], pages[10]],
   },
-  ...pages.slice(9),
+  ...pages.slice(11),
 ];
 
 const app = document.querySelector("#app");
@@ -34,30 +36,30 @@ const basePath = import.meta.env.BASE_URL;
 const standardPageContent = {
   "/calls": {
     title: "Call for submissions",
-    subtitle: "AIMC 2027",
+    subtitle: "",
     body: `
       <p>Coming soon.</p>
     `,
   },
   "/reviewing-process": {
     title: "Reviewing process",
-    subtitle: "AIMC 2027",
+    subtitle: "",
     body: `
       <p>Coming soon.</p>
     `,
   },
   "/program": {
     title: "Program",
-    subtitle: "AIMC 2027",
+    subtitle: "",
     body: `
-      <p>Coming soon.</p>
+      <p>Program details will be announced soon.</p>
     `,
   },
   "/tutorials-and-workshops": {
     title: "Tutorials and workshops",
-    subtitle: "AIMC 2027",
+    subtitle: "",
     body: `
-      <p>Coming soon.</p>
+      <p>Tutorials and workshops will be announced soon.</p>
     `,
   },
   "/keynotes": {
@@ -69,9 +71,9 @@ const standardPageContent = {
   },
   "/submission-info": {
     title: "Submission info",
-    subtitle: "AIMC 2027",
+    subtitle: "",
     body: `
-      <p>future content</p>
+      <p>Coming soon.</p>
     `,
   },
   "/registration": {
@@ -110,12 +112,12 @@ const standardPageContent = {
       </table>
       <br>
       <p>
-        <i> * All fees are in Canadian Dollars ($CAD). </i>
+        <i> * All fees are in Canadian Dollars ($CAD) and are subject to change. </i>
       </p>
     `,
   },
-  "/venue-and-travel": {
-    title: "Venue and travel",
+  "/venues-and-travel": {
+    title: "Venues and travel",
     subtitle: "AIMC 2027 will take place in Montreal, Quebec",
     body: `
     <h2 class="body-copy-heading">General information</h2> 
@@ -222,15 +224,25 @@ const standardPageContent = {
         </div>
       </article>
     </div>
-    <h2 class="body-copy-heading">Accomodation</h2> 
-    <p>
-        Montréal
-    </p>
+    `,
+  },
+  "/accommodation": {
+    title: "Accommodation",
+    subtitle: "",
+    body: `
+      <p>Accomodation details coming soon.</p>
+    `,
+  },
+  "/accessibility": {
+    title: "Accessibility",
+    subtitle: "",
+    body: `
+      <p>Accessibility statements coming soon.</p>
     `,
   },
   "/about": {
     title: "About AIMC",
-    subtitle: "AI Music Creativity",
+    subtitle: "",
     body: `
       <p>
         The AI Music Creativity (AIMC) originates from the integration of
@@ -257,6 +269,8 @@ const standardPageContent = {
                   <b>Conference Chair: Dominic Thibault </b>| Université de Montréal, Montréal, Canada
                 <br>
                   <b>Scientific Co-Chair: Gabriel Vigliensoni </b>| Concordia University, Montréal, Canada
+                <br>
+                  <b>Scientific Co-Chair: Bob L. Sturm </b>| KTH Royal Institute of Technology, Stockholm, Sweden
                 <br>                
                   <b>Artistic Chair: Eliot Britton </b>| McGill University, Montréal, Canada
                 <br>
@@ -267,6 +281,8 @@ const standardPageContent = {
                   <b>Local organization: Caroline Traube </b>| Université de Montréal, Montréal, Canada
                 <br>
                   <b>Coordination assistant: Samuel Gendron </b>| Université de Montréal, Montréal, Canada
+                <br>
+                  <b>Scientific assistant: Uandha Fernandes Barbosa </b>| Concordia University, Montréal, Canada
                 </p>
                 
       <h2 class="body-copy-heading">Steering Committee</h2>
@@ -293,25 +309,30 @@ const standardPageContent = {
     title: "Contact Us",
     subtitle: "",
     body: `
-      <p>
+    <h2 class="body-copy-heading">Contact information</h2>
+    <p>
         If you have any questions or need further information about this edition of 
         the AI Music Creativity Conference, please feel free to reach out to us using the contact information below:
       </p> 
       <p>
-        <b> chair@aimusiccreativity.org </b> 
+        <b>Conference Chair:</b> <a href="mailto:chair@aimusiccreativity.org">chair@aimusiccreativity.org</a> 
       </p>
       <p>
-        <b> paper@aimusiccreativity.org </b> 
+        <b>Scientific Chairs:</b> <a href="mailto:paper@aimusiccreativity.org">paper@aimusiccreativity.org</a>
       </p>
       <p>
-        <b> music@aimusiccreativity.org </b> 
+        <b>Artistic Chair:</b> <a href="mailto:music@aimusiccreativity.org">music@aimusiccreativity.org</a> 
       </p>
       <p>
-        <b> workshop@aimusiccreativity.org </b> 
+        <b>Workshop Chair:</b> <a href="mailto:workshop@aimusiccreativity.org">workshop@aimusiccreativity.org</a> 
       </p>
       <p>
+      <br>
         For inquiries regarding the AI Music Creativity Association, please visit the main AIMC 
         website at <a href="https://aimusiccreativity.org">https://aimusiccreativity.org</a>.
+      </p>
+      <p>
+        Join the AIMC mailing list: <a href="https://groups.google.com/g/musicalmetacreation">AIMC Community Group</a>.
       </p>
     `,
   },
@@ -421,7 +442,7 @@ function renderPage() {
                 </div>
                 <div class="hero-actions">
                   <a class="button button--primary" href="${getPageHref("/calls")}">Submit your work</a>
-                  <a class="button button--secondary" href="${getPageHref("/venue-and-travel")}">Plan your visit</a>
+                  <a class="button button--secondary" href="${getPageHref("/venues-and-travel")}">Plan your visit</a>
                 </div>
               </div>
             </section>
@@ -479,7 +500,7 @@ function renderPage() {
                 <a class="pathway-card pathway-card--blue" href="${getPageHref("/program")}">
                   <span class="pathway-number">02</span><h3>Attend</h3><p>Discover the program, workshops, keynotes, and registration information.</p><span class="pathway-link">Explore the program <span aria-hidden="true">→</span></span>
                 </a>
-                <a class="pathway-card pathway-card--navy" href="${getPageHref("/venue-and-travel")}">
+                <a class="pathway-card pathway-card--navy" href="${getPageHref("/venues-and-travel")}">
                   <span class="pathway-number">03</span><h3>Montréal</h3><p>Plan your trip and explore two venues at the heart of a vibrant artistic city.</p><span class="pathway-link">Plan your visit <span aria-hidden="true">→</span></span>
                 </a>
               </div>
