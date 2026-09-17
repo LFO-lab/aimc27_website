@@ -428,7 +428,7 @@ function renderPage() {
           ? `
             <section class="home-subheader" aria-labelledby="home-title">
               <img
-                src="${getAssetPath("images/TEMP_marc-olivier-jodoin_mtl.jpg")}"
+                src="${getAssetPath("images/MMR.jpeg")}"
                 alt=""
                 class="home-subheader-image"
               >
