@@ -1,0 +1,15 @@
+export const pages = [
+  { title: "Home", path: "/" },
+  { title: "Call for submissions", path: "/calls" },
+  { title: "Reviewing process", path: "/reviewing-process" },
+  { title: "Program", path: "/program" },
+  { title: "Tutorials and workshops", path: "/tutorials-and-workshops" },
+  { title: "Keynotes", path: "/keynotes" },
+  { title: "Submission info", path: "/submission-info" },
+  { title: "Registration", path: "/registration" },
+  { title: "Venues and travel", path: "/venues-and-travel" },
+  { title: "Accommodation", path: "/accommodation" },
+  { title: "Accessibility", path: "/accessibility" },
+  { title: "About", path: "/about" },
+  { title: "Contact", path: "/contact" },
+];
