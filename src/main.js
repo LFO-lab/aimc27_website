@@ -36,8 +36,14 @@ const standardPageContent = {
       <p>AI systems may not be listed as authors.</p>
       <p>When preparing scholarly submissions, AI assistance should be limited to supporting the presentation of the work, such as improving language or clarity. Authors must develop and take responsibility for the research ideas, analysis, and conclusions. This does not prevent research or artistic submissions from studying or creating with AI, provided its role is disclosed.</p>
 
-      <h2 class="body-copy-subheading">AI Use in Peer Review</h2>
-      <p><strong>The use of generative AI or large language models to evaluate, summarize, or write peer reviews of confidential submissions is prohibited.</strong> Reviewers must provide their own independent assessments and must not upload confidential submissions to external generative AI services.</p>
+      <h2 class="body-copy-subheading">AI Use in the Review Process</h2>
+      <p>The use of AI tools for the purpose of reviewing submissions is strictly prohibited.</p>
+      <ul>
+        <li>The use of online AI or LLM-based tools poses a risk to confidentiality, as submitted manuscripts contain unpublished and sensitive material.</li>
+        <li>Peer reviews must reflect the independent, critical, and expert judgment of the assigned reviewers.</li>
+        <li>AI systems do not possess the domain expertise, accountability, or scholarly responsibility required for scientific peer review.</li>
+      </ul>
+      <p>Violation of this policy may result in sanctions, including removal from the reviewer pool.</p>
 
     `,
   },
