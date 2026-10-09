@@ -33,7 +33,38 @@ const standardPageContent = {
     title: "Reviewing process",
     subtitle: "",
     body: `
-      <p>Coming soon.</p>
+      <!-- TODO: Update this temporary AIMC 2026 reviewing-process text for AIMC 2027. -->
+      <p>AIMC 2026’s program committee is assembled from experts in the AI music research community and listed on the AIMC 2026 website. Paper program committee members will be assigned 2-5 papers to review. Each paper should receive at least 3 reviews. Senior paper program committee members will be assigned additional meta-review duties. Music and Tutorial/Workshop committee members will be assigned 2-4 submissions to review, each submission should receive at least 2 reviews.</p>
+      <p>Paper program committee members will be assigned 3-5 papers to review. Each paper should receive at least 3 reviews. Senior paper program committee members will be assigned additional meta-review duties.</p>
+      <p>For each paper, reviewers will be asked to:</p>
+      <ul>
+        <li>Rate the paper on a scale from 1 ( strong reject) to 5 (strong accept).</li>
+        <li>Rate the reviewer’s own confidence on a scale of 1 (low confidence) to 5 (high confidence).</li>
+        <li>Indicate whether the submission would be better suited to a demo session for work in development.</li>
+        <li>Provide a written review to the authors.</li>
+        <li>Add any additional confidential comments to the paper chair.</li>
+      </ul>
+      <p>Reviews should show substantial engagement with the paper and provide constructive, respectful feedback. Reviews should begin with a short summary of the paper to confirm the reviewer’s understanding of the work. They should contain a clear rationale for the score given and a statement of any expectations of revisions needed for acceptance. Reviewers should take reasonable steps not to identify themselves and should avoid recommending their own work for citation.</p>
+      <p>Reviews should consider the following:</p>
+      <ul>
+        <li>Relevance to AIMC community and grounding in relevant literature.</li>
+        <li>The originality or novelty of the submission as a contribution to the conference.</li>
+        <li>The artistic/scientific/theoretical quality of the submission.</li>
+        <li>The readability and organisation of this paper.</li>
+        <li>The appropriate use of methodology and reasonableness of claims.</li>
+        <li>Ethical standards.</li>
+        <li>Relationship of the submission to the conference theme.</li>
+      </ul>
+      <p>Reviewers should clearly call out unreasonable claims, potentially misleading use of evidence, or a weak methodology, such as the following:</p>
+      <ul>
+        <li>Papers that seek to show the benefits of a new algorithm, program, process etc. should do so via rich analysis of users’ experience, seeking to identify shortcomings as well as benefits, and avoiding ungrounded affirmations.</li>
+        <li>Papers that seek to show benefits of applying AI music to areas such as health, wellbeing, disability support, community participation and inclusion, or the democratisation of creative practices, should show a depth of engagement with the problem space. For example, if a paper suggests benefits of AI music to people with disability, reviewers should rightly question whether such work has been well-grounded in an understanding of the needs of those communities.</li>
+        <li>There is no formal expectation for quantitative user results or performer benchmarks, and AIMC welcomes practice-based and practice-led approaches to new knowledge. While more formal results will significantly improve a paper’s impact, and should be encouraged, authors and reviewers should equally scrutinise the claims made in relation to those results. Formal studies can both benefit and undermine, if done badly, a great piece of academic work.</li>
+      </ul>
+      <p>After reviewing, a light metareview process will follow. The purpose of metareviewing is to address contradictions between reviewers and align scoring standards. Metareviwers should review the reviews and ask reviewers to discuss any points of contradiction. They should then collate and summarise the key points, clearly stating any revisions needed, and provide a final rating (1-5, strong reject to strong accept). During discussion, reviewers should not update their original comments or scores unless they have made a clear error.</p>
+      <p>The chair will make final decisions based on the meta review ratings. In discussion with senior PC members, they reserve the right to make final decisions on acceptance considering issues of equity, diversity and inclusion and the overall academic profile of the conference.</p>
+      <p>The reviewing process for the Music submissions follows the same general principles as the paper reviewing process, but is more streamlined. Music submissions will be subject to single-blind peer review by at least two reviewers. There will be no meta-reviewing phase, and the final decisions will be taken jointly by the music chairs, depending on the quality of the proposed activities and limits imposed by the conference schedule. Contributors may be requested to slightly adapt their proposals to better fit the schedule and/or other organizational requirements.</p>
+      <p>The reviewing process for the tutorial/workshop submissions follows the same general principles as the paper reviewing process, but is more streamlined. Tutorial/workshop submissions will be subject to single-blind peer review by at least two reviewers. There will be no meta-reviewing phase, and the final decisions will be taken jointly by the tutorial/workshop chairs, depending on the quality of the proposed activities and limits imposed by the conference schedule. Contributors may be requested to slightly adapt their proposals to better fit the schedule and/or other organizational requirements.</p>
       <h2>Acknowledgment</h2>
       <p>
         ${cmtAcknowledgment}
