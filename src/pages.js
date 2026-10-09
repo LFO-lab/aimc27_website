@@ -12,4 +12,5 @@ export const pages = [
   { title: "Accessibility", path: "/accessibility" },
   { title: "About", path: "/about" },
   { title: "Contact", path: "/contact" },
+  { title: "AI use policy", path: "/ai-use-policy" },
 ];

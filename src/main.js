@@ -6,7 +6,7 @@ const navigationItems = [
   pages[0],
   {
     title: "Calls",
-    children: [pages[1], pages[2]],
+    children: [pages[1], pages[2], pages.find((page) => page.path === "/ai-use-policy")],
   },
   {
     title: "Program",
@@ -16,12 +16,34 @@ const navigationItems = [
     title: "For Attendees",
     children: [pages[6], pages[7], pages[8], pages[9], pages[10]],
   },
-  ...pages.slice(11),
+  ...pages.slice(11).filter((page) => page.path !== "/ai-use-policy"),
 ];
 
 const app = document.querySelector("#app");
 const basePath = import.meta.env.BASE_URL;
 const standardPageContent = {
+  "/ai-use-policy": {
+    title: "AI use policy",
+    subtitle: "Peer Review and Responsible Use of AI",
+    body: `
+      <p>AIMC is committed to rigorous, constructive, and responsible peer review that recognizes the diversity of scientific, artistic, and practice-based approaches represented within the conference community.</p>
+      <p>Research papers will undergo double-blind peer review. Music and workshop submissions will undergo single-blind peer review.</p>
+
+      <h2 class="body-copy-subheading">AI Use and Disclosure</h2>
+      <p>AIMC recognizes the central role of AI in the research and artistic practices represented at the conference. However, all contributors remain responsible for the originality, accuracy, integrity, and ethical implications of their submissions.</p>
+      <p>Authors must disclose the use of generative AI tools in preparing submitted materials, including their use in generating or modifying text, code, images, audio, or other content. Disclosures should identify the tools used, their purpose, and the parts of the submission affected.</p>
+      <p>Such disclosures must be included in an acknowledgement or dedicated statement within the submission.</p>
+      <p>AI systems may not be listed as authors.</p>
+      <p>When preparing scholarly submissions, AI assistance should be limited to supporting the presentation of the work, such as improving language or clarity. Authors must develop and take responsibility for the research ideas, analysis, and conclusions. This does not prevent research or artistic submissions from studying or creating with AI, provided its role is disclosed.</p>
+
+      <h2 class="body-copy-subheading">AI Use in Peer Review</h2>
+      <p><strong>The use of generative AI or large language models to evaluate, summarize, or write peer reviews of confidential submissions is prohibited.</strong> Reviewers must provide their own independent assessments and must not upload confidential submissions to external generative AI services.</p>
+
+      <h2 class="body-copy-subheading">Reviewer Participation</h2>
+      <p>To support a fair and sustainable review process, AIMC 2027 intends to introduce a shared reviewing responsibility for submitting authors.</p>
+      <p>Authors submitting research papers may be asked to nominate a qualified co-author or representative willing to contribute to the peer-review process. The exact eligibility requirements, reviewing obligations, and exceptions for early-career researchers or independent contributors will be communicated in the final submission guidelines.</p>
+    `,
+  },
   "/calls": {
     title: "Call for submissions",
     subtitle: "",
