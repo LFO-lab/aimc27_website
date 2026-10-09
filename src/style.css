@@ -633,6 +633,8 @@ h6 {
 }
 
 .body-copy > p,
+.body-copy > ul,
+.body-copy > ol,
 .body-copy > b,
 .body-copy > strong,
 .body-copy > hr,
@@ -645,6 +647,17 @@ h6 {
 .body-copy p {
   margin-top: 0;
   margin-bottom: 1.3rem;
+}
+
+.body-copy ul,
+.body-copy ol {
+  padding-inline-start: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.3rem;
+}
+
+.body-copy li + li {
+  margin-top: 0.4rem;
 }
 
 .body-copy > b,
