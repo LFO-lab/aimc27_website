@@ -39,9 +39,6 @@ const standardPageContent = {
       <h2 class="body-copy-subheading">AI Use in Peer Review</h2>
       <p><strong>The use of generative AI or large language models to evaluate, summarize, or write peer reviews of confidential submissions is prohibited.</strong> Reviewers must provide their own independent assessments and must not upload confidential submissions to external generative AI services.</p>
 
-      <h2 class="body-copy-subheading">Reviewer Participation</h2>
-      <p>To support a fair and sustainable review process, AIMC 2027 intends to introduce a shared reviewing responsibility for submitting authors.</p>
-      <p>Authors submitting research papers may be asked to nominate a qualified co-author or representative willing to contribute to the peer-review process. The exact eligibility requirements, reviewing obligations, and exceptions for early-career researchers or independent contributors will be communicated in the final submission guidelines.</p>
     `,
   },
   "/calls": {
