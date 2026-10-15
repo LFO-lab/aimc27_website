@@ -29,14 +29,14 @@ const standardPageContent = {
       <p>AIMC is committed to rigorous, constructive, and responsible peer review that recognizes the diversity of scientific, artistic, and practice-based approaches represented within the conference community.</p>
       <p>Research papers will undergo double-blind peer review. Music and workshop submissions will undergo single-blind peer review.</p>
 
-      <h2 class="body-copy-subheading">AI Use and Disclosure</h2>
+      <h2 class="body-copy-heading">AI Use and Disclosure</h2>
       <p>AIMC recognizes the central role of AI in the research and artistic practices represented at the conference. However, all contributors remain responsible for the originality, accuracy, integrity, and ethical implications of their submissions.</p>
       <p>Authors must disclose the use of generative AI tools in preparing submitted materials, including their use in generating or modifying text, code, images, audio, or other content. Disclosures should identify the tools used, their purpose, and the parts of the submission affected.</p>
       <p>Such disclosures must be included in an acknowledgement or dedicated statement within the submission.</p>
       <p>AI systems may not be listed as authors.</p>
       <p>When preparing scholarly submissions, AI assistance should be limited to supporting the presentation of the work, such as improving language or clarity. Authors must develop and take responsibility for the research ideas, analysis, and conclusions. This does not prevent research or artistic submissions from studying or creating with AI, provided its role is disclosed.</p>
 
-      <h2 class="body-copy-subheading">AI Use in the Review Process</h2>
+      <h2 class="body-copy-heading">AI Use in the Review Process</h2>
       <p>The use of AI tools for the purpose of reviewing submissions is strictly prohibited.</p>
       <ul>
         <li>The use of online AI or LLM-based tools poses a risk to confidentiality, as submitted manuscripts contain unpublished and sensitive material.</li>
@@ -90,7 +90,7 @@ const standardPageContent = {
       <p>The chair will make final decisions based on the meta review ratings. In discussion with senior PC members, they reserve the right to make final decisions on acceptance considering issues of equity, diversity and inclusion and the overall academic profile of the conference.</p>
       <p>The reviewing process for the Music submissions follows the same general principles as the paper reviewing process, but is more streamlined. Music submissions will be subject to single-blind peer review by at least two reviewers. There will be no meta-reviewing phase, and the final decisions will be taken jointly by the music chairs, depending on the quality of the proposed activities and limits imposed by the conference schedule. Contributors may be requested to slightly adapt their proposals to better fit the schedule and/or other organizational requirements.</p>
       <p>The reviewing process for the tutorial/workshop submissions follows the same general principles as the paper reviewing process, but is more streamlined. Tutorial/workshop submissions will be subject to single-blind peer review by at least two reviewers. There will be no meta-reviewing phase, and the final decisions will be taken jointly by the tutorial/workshop chairs, depending on the quality of the proposed activities and limits imposed by the conference schedule. Contributors may be requested to slightly adapt their proposals to better fit the schedule and/or other organizational requirements.</p>
-      <h2>Acknowledgment</h2>
+      <h2 class="body-copy-subheading">Acknowledgment</h2>
       <p>
         ${cmtAcknowledgment}
       </p>
@@ -526,8 +526,8 @@ function renderPage() {
                 <h2>Important dates</h2>
                 <ol class="date-list">
                   <li><time datetime="2026-11-09"><span>Nov</span> 09</time><p>Call opens<small>2026</small></p></li>
-                  <li><time datetime="2027-03-01"><span>Mar</span> 01</time><p>Paper abstract deadline<small>2027</small></p></li>
-                  <li><time datetime="2027-03-08"><span>Mar</span> 08</time><p>Full submission deadline<small>2027</small></p></li>
+                  <li><time datetime="2027-02-22"><span>Feb</span> 22</time><p>Paper abstract deadline<small>2027</small></p></li>
+                  <li><time datetime="2027-03-01"><span>Mar</span> 01</time><p>Full submission deadline<small>2027</small></p></li>
                   <li><time datetime="2027-05-03"><span>May</span> 03</time><p>Notifications of acceptance<small>2027</small></p></li>
                   <li><time datetime="2027-06-07"><span>Jun</span> 07</time><p>Camera-ready deadline<small>2027</small></p></li>
                   <li><time datetime="2027-07-02"><span>Jul</span> 02</time><p>Early-bird registration<small>2027</small></p></li>
@@ -584,6 +584,9 @@ function renderPage() {
         <img src="${getAssetPath("images/udem-logo.png")}" alt="Universite de Montreal">
         <img src="${getAssetPath("images/mcgill-logo.png")}" alt="McGill University">
         <img src="${getAssetPath("images/CIRMMT-logo.svg")}" alt="CIRMMT">
+      </div>
+      <div class="footer-funder">
+        <img src="${getAssetPath("images/sshrc-fip-full-color-eng.jpg")}" alt="Social Sciences and Humanities Research Council of Canada">
       </div>
       <p class="footer-copyright">© 2026 AI Music Creativity (AIMC). All rights reserved.</p>
     </footer>
