@@ -1,6 +1,6 @@
 export const pages = [
   { title: "Home", path: "/" },
-  { title: "Call for submissions", path: "/calls" },
+  { title: "Call for Contributions", path: "/calls" },
   { title: "Reviewing process", path: "/reviewing-process" },
   { title: "Program", path: "/program" },
   { title: "Tutorials and workshops", path: "/tutorials-and-workshops" },
