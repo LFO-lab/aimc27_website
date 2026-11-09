@@ -62,7 +62,7 @@ const standardPageContent = {
       </article>
       <aside class="call-review-notice">
       <h2 class="body-copy-subheading">*** New Reviewing Process in 2027 ***</h2>
-        <p>Please take the time to examine the <i>Reviewer Participation</i> section, as authors of submissions are required to￼ participate in the reviewing process.</p>
+        <p>Please take the time to examine the <a href="#reviewer-participation"><i>Reviewer Participation</i></a> section, as authors of submissions are required to￼ participate in the reviewing process.</p>
       </aside>
       </div>
       <details class="call-section">
@@ -828,6 +828,15 @@ function renderPage() {
       <p class="footer-copyright">© 2026 AI Music Creativity (AIMC). All rights reserved.</p>
     </footer>
   `;
+  revealLinkedSection();
+}
+
+function revealLinkedSection() {
+  const target = document.getElementById(window.location.hash.slice(1));
+  if (!target) return;
+
+  if (target instanceof HTMLDetailsElement) target.open = true;
+  target.scrollIntoView();
 }
 
 window.addEventListener("popstate", renderPage);
