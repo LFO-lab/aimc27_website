@@ -14,3 +14,14 @@ export const pages = [
   { title: "Contact", path: "/contact" },
   { title: "AI use policy", path: "/ai-use-policy" },
 ];
+
+export const siteUrl = "https://2027.aimusiccreativity.org";
+
+export function getPage(pathname) {
+  const path = pathname.replace(/\/+$/, "") || "/";
+  return pages.find((page) => page.path === path);
+}
+
+export function getPageHref(path) {
+  return path === "/" ? "/" : `${path}/`;
+}
