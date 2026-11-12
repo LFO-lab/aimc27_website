@@ -1,40 +1,74 @@
 # AIMC 2027 website
 
-A Vite site deployed to GitHub Pages. All 14 routes are rendered to complete HTML during the build, so content and metadata are available without JavaScript.
+Official website for **AIMC 2027, the 8th Conference on AI Music Creativity**, taking place August 18–20, 2027, in Montréal, Québec, Canada. The conference theme is *At the Limits of Immersion*.
 
-## Local development
+**Website:** [2027.aimusiccreativity.org](https://2027.aimusiccreativity.org/)
+
+The site provides calls for contributions, submission and reviewing information, conference program updates, registration details, and practical information about venues, travel, and accommodation. It also introduces the conference community and organizing committees and provides contact information.
+
+## Technology
+
+The website uses JavaScript, HTML, and CSS, with Vite for local development and production builds. A shared renderer generates complete HTML pages at build time, making the published content available without JavaScript. Browser scripts enhance navigation and section links.
+
+The production site is hosted on GitHub Pages. No application server or database is required.
+
+## Run locally
+
+Use Node.js 20 or a compatible newer version, with npm installed. From the repository directory:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-The development server renders pages in the browser. To test the actual static output:
+Open the local URL printed in the terminal. Source changes update the development preview automatically. Press **Ctrl+C** to stop the server.
+
+To build and preview the production site:
 
 ```sh
 npm run build
 npm run preview
 ```
 
-Open the URL printed by Vite. View source or use `curl` against the preview to inspect the initial HTML. For example:
+The build writes the publishable site to `dist/`. The production preview serves those generated files; run the build again after making changes you want to preview there.
+
+## Project structure
+
+| File or directory | Purpose |
+| --- | --- |
+| `src/content.js` | Text and HTML content for the standard pages. |
+| `src/render.js` | Shared layout, navigation, homepage, and footer. |
+| `src/pages.js` | Page titles, routes, and URL helpers. |
+| `src/metadata.js` | Page titles and descriptions for search and sharing, canonical URLs, and conference structured data. |
+| `src/main.js` | Browser navigation and section-link behavior. |
+| `src/style.css` | Site styling and responsive layouts. |
+| `src/acknowledgment.js` | Shared reviewing acknowledgment text. |
+| `public/` | Static assets, including images and the favicon. |
+| `index.html` | HTML document template. |
+| `vite.config.js` | Build configuration and static page generation. |
+| `scripts/check-build.js` | Automated checks of generated pages. |
+| `.github/workflows/deploy.yml` | GitHub Pages build and deployment workflow. |
+
+## Update the website
+
+Edit standard page content in `src/content.js` and homepage content in `src/render.js`. Update styles in `src/style.css`, and place images or other static files in `public/`; files in this directory are served from the site root.
+
+When adding a page, register its route in `src/pages.js`, add its content in `src/content.js`, and provide a description in `src/metadata.js`. Check its placement in the navigation defined in `src/render.js`.
+
+Keep conference dates, venues, and other shared information consistent wherever they appear, including page metadata and structured data. The renderer is used by both Node.js during builds and the browser, so browser-specific behavior belongs in `src/main.js`.
+
+## Check changes
+
+`npm run build` generates the site and runs automated checks for page content, HTML structure, metadata, structured data, internal links, accessible labels, and submission deadlines. To rerun the checks against an existing build:
 
 ```sh
-curl -L http://localhost:4173/calls/
+npm run check:build
 ```
 
-## Editing
+Use the production preview to check desktop and mobile layouts, keyboard navigation, collapsible sections, section links, and browser Back/Forward. Page content and ordinary navigation should also remain usable with JavaScript disabled.
 
-- `src/content.js`: page content, including the Calls deadlines.
-- `src/render.js`: shared page layout, navigation, homepage, and footer. This module must remain usable in Node without browser APIs.
-- `src/pages.js`: routes and canonical URL helpers. The site is hosted at the domain root.
-- `src/metadata.js`: page descriptions, titles, Open Graph metadata, and conference Event JSON-LD. Keep the event dates and venues consistent with visible content.
-- `src/main.js`: browser navigation and section-link enhancements. Production HTML is retained on initial load; ordinary page links and native disclosures also work without scripts.
-- `vite.config.js`: generates `dist/index.html` and an `index.html` in each route directory, using the shared renderer.
+## Deployment
 
-## Validation and deployment
+Pushing to `main` triggers the GitHub Actions workflow, which installs dependencies, builds and checks the site, and deploys `dist/` to GitHub Pages. The workflow can also be started manually from the repository's Actions tab.
 
-`npm run build` also runs `npm run check:build`. The checks parse every generated HTML document and verify complete page text, landmarks, metadata, event data, internal links, accessible labels, and Calls deadlines. The existing GitHub Actions deployment runs this same command before uploading `dist`.
-
-Before deploying, check desktop/mobile layouts, keyboard navigation, disclosures, section links, and browser Back/Forward. With JavaScript disabled, page content and navigation must remain usable.
-
-GitHub Pages redirects slashless routes such as `/calls` to `/calls/`; canonical URLs use the latter. After deployment, repeat HTTP checks against the public domain to verify HTTP 200 after redirects and the presence of actual conference text in the response. Cloudflare-managed crawler rules and firewall settings are external to this repository and must be checked separately when investigating access by a particular crawler.
+Published page URLs use trailing slashes, such as `/calls/`; GitHub Pages redirects the slashless equivalents. After deployment, verify the affected pages on the public website. Domain, CDN, and crawler-access settings are managed outside this repository.

@@ -43,6 +43,14 @@ export const standardPageContent = {
       <h2 class="body-copy-subheading">*** New Reviewing Process in 2027 ***</h2>
         <p>Please take the time to examine the <a href="#reviewer-participation"><i>Reviewer Participation</i></a> section, as authors of submissions are required to participate in the reviewing process.</p>
       </aside>
+      <section class="call-submission" aria-labelledby="submission-page-title">
+        <h2 class="body-copy-subheading" id="submission-page-title">Submission Page:</h2>
+        <p><a href="https://cmt3.research.microsoft.com/AIMC2027">https://cmt3.research.microsoft.com/AIMC2027</a></p>
+      </section>
+      <section class="call-submission" aria-labelledby="submission-templates-title">
+        <h2 class="body-copy-subheading" id="submission-templates-title">Submission Templates:</h2>
+        <p><a href="/downloads/AIMC2027-templates.zip" download>Download AIMC 2027 templates (ZIP)</a></p>
+      </section>
       </div>
       <details class="call-section">
       <summary><h2>2027 Conference Theme: <br>At the Limits of Immersion</h2></summary>

@@ -1029,7 +1029,19 @@ h6 {
   background: var(--yellow-pale);
 }
 
-.call-review-notice .body-copy-subheading {
+.call-submission {
+  grid-column: 1 / -1;
+  padding: 1.5rem clamp(1.25rem, 3vw, 2rem);
+  border-top: 0.35rem solid var(--yellow);
+  background: var(--white);
+}
+
+.call-submission a {
+  overflow-wrap: anywhere;
+}
+
+.call-review-notice .body-copy-subheading,
+.call-submission .body-copy-subheading {
   margin: 0 0 0.65rem;
   font-size: clamp(1.05rem, 2.5vw, 1.3rem);
   line-height: 1.4;

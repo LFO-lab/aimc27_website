@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { parse } from "parse5";
 import { pages, getPage, getPageHref, siteUrl } from "../src/pages.js";
 import { standardPageContent } from "../src/content.js";
@@ -67,6 +67,10 @@ for (const [path, doc] of documents) {
     if (!href) continue;
     const url = new URL(href, `${siteUrl}${getPageHref(path)}`);
     if (url.origin !== siteUrl) continue;
+    if (attr(link, "download") !== undefined) {
+      await access(`dist${decodeURIComponent(url.pathname)}`);
+      continue;
+    }
     const targetPage = getPage(url.pathname);
     assert.ok(targetPage, `${path}: broken internal link ${href}`);
     if (url.hash) {
